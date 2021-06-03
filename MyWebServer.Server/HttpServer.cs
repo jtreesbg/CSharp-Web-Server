@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using MyWebServer.Server.Http;
+    using MyWebServer.Server.Routing;
 
     public class HttpServer
     {
@@ -13,12 +14,24 @@
         private readonly int port;
         private readonly TcpListener listener;
 
-        public HttpServer(string ipAddress, int port)
+        public HttpServer(string ipAddress, int port, Action<IRoutingTable> routingTable)
         {
             this.ipAddress = IPAddress.Parse(ipAddress);
             this.port = port;
 
             this.listener = new TcpListener(this.ipAddress, this.port);
+        }
+
+        public HttpServer(int port, Action<IRoutingTable> routingTable)
+            : this("127.0.0.1", port, routingTable)
+        {
+
+        }
+
+        public HttpServer(Action<IRoutingTable> routingTable)
+           : this(5000, routingTable)
+        {
+
         }
 
         public async Task Start()

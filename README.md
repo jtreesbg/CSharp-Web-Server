@@ -11,3 +11,7 @@ Steps to create a similar web server from sratch.
 5. Read the request in chunks (1024 bytes each) and store it in a StringBuilder.
 6. Extract separate Server and Http classes.
 7. Parse the HTTP request.
+8. Create routing table which should allow verous HTTP methods.
+9. Make sure the HTTP server can populate the routing table.
+10. Create specific HTTP response classes - TextResponse, for example.
+11. Implement the ToString method for the HTTP response class.
