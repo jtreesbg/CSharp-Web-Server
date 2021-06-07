@@ -19,3 +19,6 @@ Steps to create a similar web server from sratch.
 13. Use the routing table in the HTTP server for actual request-response matching.
 14. Separate the URL and parse the query string if it exists
 15. Introduct the option to use the request by storing request-fucntions in the routing table.
+16. Introduce base controllers and extract common functionalities.
+17. Shortem the route syntax and add support for controllers.
+18. Add redirect HTTP responses and use the Location header to control the flow.
