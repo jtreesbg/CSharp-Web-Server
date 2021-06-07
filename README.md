@@ -15,3 +15,5 @@ Steps to create a similar web server from sratch.
 9. Make sure the HTTP server can populate the routing table.
 10. Create specific HTTP response classes - TextResponse, for example.
 11. Implement the ToString method for the HTTP response class.
+12. Implament the routing table for storing and retrieving request and mapping.
+13. Use the routing table in the HTTP server for actual request-response matching.

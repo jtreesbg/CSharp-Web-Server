@@ -9,8 +9,8 @@
         public static async Task Main()
         => await new HttpServer(routes => routes
             .MapGet("/", new TextResponse("Hello from Alex!"))
-            .MapGet("/Cats", new TextResponse("Hello from kotencata!"))
-            .MapGet("/Dogs", new TextResponse("Hello from the dogos!")))
-            .Start();
+            .MapGet("/Cats", new HtmlResponse ("Hello from kotencata!"))
+            .MapGet("/Dogs", new HtmlResponse("Hello from the dogos!")))
+        .Start();
     }
 }
