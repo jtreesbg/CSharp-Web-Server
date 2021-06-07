@@ -17,3 +17,5 @@ Steps to create a similar web server from sratch.
 11. Implement the ToString method for the HTTP response class.
 12. Implament the routing table for storing and retrieving request and mapping.
 13. Use the routing table in the HTTP server for actual request-response matching.
+14. Separate the URL and parse the query string if it exists
+15. Introduct the option to use the request by storing request-fucntions in the routing table.
